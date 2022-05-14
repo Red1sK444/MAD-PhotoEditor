@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/rootLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".image.ImageMainFragment">
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginHorizontal="32dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginBottom="16dp"
+        android:contentDescription="@string/photo_desc"
+        android:src="@drawable/ic_photo"
+        app:layout_constraintBottom_toTopOf="@+id/algorithmScrollView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <HorizontalScrollView
+        android:id="@+id/algorithmScrollView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            android:scrollbars="none">
+
+            <ImageButton
+                android:id="@+id/colorCorrectionBtn"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="8dp"
+                android:layout_weight="1"
+                android:background="@color/transparent"
+                android:contentDescription="@string/color_correction_desc"
+                android:padding="16dp"
+                android:src="@drawable/ic_palette" />
+
+            <ImageButton
+                android:id="@+id/faceAiBtn"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="8dp"
+                android:layout_weight="1"
+                android:background="@color/transparent"
+                android:contentDescription="@string/face_ai_desc"
+                android:padding="16dp"
+                android:src="@drawable/ic_face" />
+
+            <ImageButton
+                android:id="@+id/filteringBtn"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="8dp"
+                android:layout_weight="1"
+                android:background="@color/transparent"
+                android:contentDescription="@string/filtering_desc"
+                android:padding="16dp"
+                android:src="@drawable/ic_filter" />
+
+            <ImageButton
+                android:id="@+id/maskeringBtn"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="8dp"
+                android:layout_weight="1"
+                android:background="@color/transparent"
+                android:contentDescription="@string/maskering_desc"
+                android:padding="16dp"
+                android:src="@drawable/ic_details" />
+
+            <ImageButton
+                android:id="@+id/retouchBtn"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="8dp"
+                android:layout_weight="1"
+                android:background="@color/transparent"
+                android:contentDescription="@string/retouch_desc"
+                android:padding="16dp"
+                android:src="@drawable/ic_retouch" />
+
+            <ImageButton
+                android:id="@+id/rotatingBtn"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="8dp"
+                android:layout_weight="1"
+                android:background="@color/transparent"
+                android:contentDescription="@string/rotating_desc"
+                android:padding="16dp"
+                android:src="@drawable/ic_rotate" />
+
+            <ImageButton
+                android:id="@+id/scaleBtn"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="8dp"
+                android:layout_weight="1"
+                android:background="@color/transparent"
+                android:contentDescription="@string/scale_desc"
+                android:padding="16dp"
+                android:src="@drawable/ic_scale" />
+        </LinearLayout>
+    </HorizontalScrollView>
+</androidx.constraintlayout.widget.ConstraintLayout>

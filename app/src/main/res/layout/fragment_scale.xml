@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/rootLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginVertical="8dp"
+    tools:context=".image.scale.ScaleFragment">
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginHorizontal="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="16dp"
+        android:contentDescription="@string/photo_desc"
+        android:scaleType="center"
+        android:src="@drawable/ic_photo"
+        app:layout_constraintBottom_toTopOf="@+id/factorValue"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageRatio" />
+
+    <com.github.ybq.android.spinkit.SpinKitView
+        android:id="@+id/loadingSpinner"
+        style="@style/SpinKitView.FadingCircle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="@+id/imageView"
+        app:layout_constraintEnd_toEndOf="@+id/imageView"
+        app:layout_constraintStart_toStartOf="@+id/imageView"
+        app:layout_constraintTop_toTopOf="@+id/imageView" />
+
+    <ImageButton
+        android:id="@+id/declineBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="8dp"
+        android:background="@color/transparent"
+        android:contentDescription="@string/decline_changes_desc"
+        android:src="@drawable/ic_cross"
+        app:layout_constraintBottom_toBottomOf="@+id/factorSeekBar"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/factorSeekBar" />
+
+    <ImageView
+        android:id="@+id/imageRatioIcon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="8dp"
+        android:background="@color/transparent"
+        android:contentDescription="@string/accept_changes_desc"
+        android:src="@drawable/ic_scale"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/imageRatio"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:text=""
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="@+id/imageRatioIcon"
+        app:layout_constraintStart_toEndOf="@+id/imageRatioIcon"
+        app:layout_constraintTop_toTopOf="@+id/imageRatioIcon"
+        tools:text="(1024:1024)" />
+
+    <TextView
+        android:id="@+id/factorValue"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:text="@string/default_scale_factor"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toTopOf="@+id/factorSeekBar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <SeekBar
+        android:id="@+id/factorSeekBar"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:max="15"
+        android:maxHeight="6dp"
+        android:minHeight="6dp"
+        android:progress="2"
+        android:progressDrawable="@drawable/blue_seek_bar"
+        android:thumb="@drawable/seek_bar_thumb"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/acceptBtn"
+        app:layout_constraintStart_toEndOf="@+id/declineBtn" />
+
+    <ImageButton
+        android:id="@+id/acceptBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="8dp"
+        android:background="@color/transparent"
+        android:contentDescription="@string/decline_changes_desc"
+        android:src="@drawable/ic_accept"
+        app:layout_constraintBottom_toBottomOf="@+id/factorSeekBar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/factorSeekBar" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+

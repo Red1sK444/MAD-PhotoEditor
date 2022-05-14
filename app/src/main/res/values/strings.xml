@@ -1,0 +1,66 @@
+<resources>
+    <string name="app_name">Wonderful App</string>
+    <string name="open_photo">ОТКРЫТЬ</string>
+    <string name="nav_photo">Фото</string>
+    <string name="nav_spline">Сплайны</string>
+    <string name="nav_figure">Кубик</string>
+
+    <string name="dialog_take_photo">Сделать фото</string>
+    <string name="dialog_open_photo">Выбрать из галереи</string>
+    <string name="dialog_dismiss">Отмена</string>
+
+    <string name="storage_permission_denied">Нед доступа к галерее</string>
+    <string name="camera_permission_denied">Нет доступа к камере</string>
+    <string name="do_not_ask_again_option_on">Разрешите доступ в настройках приложения</string>
+
+    <string name="taking_photo_error">Ошибка при фотографировании</string>
+    <string name="picture_not_found">Ошибка! Загрузите фотографию</string>
+
+    <string name="photo_desc">Ваше фото</string>
+
+    <string name="color_correction_desc">Цветокоррекция</string>
+    <string name="face_ai_desc">Распознавание лиц</string>
+    <string name="filtering_desc">Билинейная и трилинейная фильтрация</string>
+    <string name="maskering_desc">Нерезкое маскирование</string>
+    <string name="retouch_desc">Ретуширование</string>
+    <string name="rotating_desc">Поворот изображения</string>
+    <string name="scale_desc">Масштабирование изображения</string>
+
+    <string name="accept_changes_desc">Accept changes</string>
+    <string name="decline_changes_desc">Decline changes</string>
+
+    <string name="default_scale_factor">1.0</string>
+    <string name="scale_image_ratio">%d:%d</string>
+
+    <string name="start_points">Начальные точки</string>
+    <string name="finish_points">Конечные точки</string>
+    <string name="points_state">Показать начальные или конечные точки</string>
+    <string name="clear_points">Очистить точки</string>
+    <string name="filter">Запустить алгоритм</string>
+    <string name="not_enough_points">Недостаточно точек</string>
+
+    <string name="delete_point">Delete Point</string>
+    <string name="add_point">Add Point</string>
+    <string name="draw_spline">Draw Spline</string>
+    <string name="clear_field">Clear Field</string>
+    <string name="move_point">Move Point</string>
+    <string name="spline_error">Добавьте больше точек</string>
+
+    <string name="faces_range">Количество граней</string>
+    <string name="rotation_by_z">Поворот по Z</string>
+
+    <string name="picture_saved">Сохранение фотографии завершено</string>
+    <string name="save_error">Произошла ошибка при загрузке фотографии</string>
+
+    <string name="faces_detected">Обнаружено лиц: %d</string>
+    <string name="maskering_t">T</string>
+    <string name="maskering_0">0</string>
+    <string name="maskering_a">A</string>
+    <string name="maskering_r">R</string>
+    <string name="maskering">Маскировать</string>
+    <string name="maskering_1">1</string>
+    <string name="retouching_a">A</string>
+    <string name="retouching_r">R</string>
+    <string name="retouching_20">20</string>
+    <string name="retouching_1">1</string>
+</resources>

@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/rootLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".figure.FigureFragment">
+
+    <com.example.android.wonderfulapp.figure.FigureSurfaceView
+        android:id="@+id/figureSurfaceView"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toTopOf="@+id/faceCountBar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_chainStyle="spread_inside" />
+
+    <TextView
+        android:id="@+id/labelForm"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:labelFor="@+id/faceCountBar"
+        android:text="@string/faces_range"
+        android:textAlignment="center"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toTopOf="@id/rotationZLabel"
+        app:layout_constraintEnd_toStartOf="@id/faceCountBar"
+        app:layout_constraintHorizontal_chainStyle="spread_inside"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/figureSurfaceView" />
+
+    <SeekBar
+        android:id="@+id/faceCountBar"
+        android:layout_width="0dp"
+        android:layout_height="20dp"
+        android:max="16"
+        android:maxHeight="6dp"
+        android:minHeight="6dp"
+        android:progress="2"
+        android:progressDrawable="@drawable/blue_seek_bar"
+        android:thumbTint="@color/blue_500"
+        app:layout_constraintBottom_toTopOf="@id/rotationZBar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/labelForm"
+        app:layout_constraintTop_toBottomOf="@id/figureSurfaceView" />
+
+    <TextView
+        android:id="@+id/facesValue"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text=""
+        android:textSize="24sp"
+        android:visibility="invisible"
+        android:layout_marginBottom="2dp"
+        app:layout_constraintBottom_toTopOf="@id/faceCountBar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/rotationZLabel"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:labelFor="@+id/rotationZBar"
+        android:text="@string/rotation_by_z"
+        android:textAlignment="center"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/rotationZBar"
+        app:layout_constraintHorizontal_chainStyle="spread_inside"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <SeekBar
+        android:id="@+id/rotationZBar"
+        android:layout_width="0dp"
+        android:layout_height="20dp"
+        android:layout_marginBottom="3dp"
+        android:max="360"
+        android:maxHeight="6dp"
+        android:minHeight="6dp"
+        android:progress="180"
+        android:progressDrawable="@drawable/blue_seek_bar"
+        android:thumbTint="@color/blue_500"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/rotationZLabel"
+        app:layout_constraintTop_toBottomOf="@id/faceCountBar" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
